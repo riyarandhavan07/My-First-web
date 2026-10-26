@@ -1,0 +1,1752 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riaa Randhavan | Portfolio</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #111719;
+  --teal: #72d6c9;
+  --white: #f6f5f0;
+  --muted: #a8b0ad;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.page {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* FIRST PAGE */
+
+#page1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(circle at 50% 50%, #263d3b 0%, #172122 35%, #111719 75%);
+}
+
+.background-text {
+  position: absolute;
+  font-size: clamp(10px, 1.5vw, 18px);
+  letter-spacing: 8px;
+  color: #ffffff12;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.background-text.top {
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.background-text.bottom {
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.portfolio-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
+  z-index: 2;
+  font-size: clamp(36px, 12vw, 160px);
+  font-weight: 900;
+  letter-spacing: -0.075em;
+  line-height: 1;
+  cursor: default;
+  user-select: none;
+  perspective: 800px;
+}
+
+.portfolio-title span {
+  display: inline-block;
+  color: var(--white);
+  transition:
+    transform 0.25s cubic-bezier(.2,.8,.2,1),
+    color 0.25s ease,
+    text-shadow 0.25s ease;
+  animation: appear 0.8s both;
+}
+
+.portfolio-title span:nth-child(1) { animation-delay: .05s; }
+.portfolio-title span:nth-child(2) { animation-delay: .10s; }
+.portfolio-title span:nth-child(3) { animation-delay: .15s; }
+.portfolio-title span:nth-child(4) { animation-delay: .20s; }
+.portfolio-title span:nth-child(5) { animation-delay: .25s; }
+.portfolio-title span:nth-child(6) { animation-delay: .30s; }
+.portfolio-title span:nth-child(7) { animation-delay: .35s; }
+.portfolio-title span:nth-child(8) { animation-delay: .40s; }
+.portfolio-title span:nth-child(9) { animation-delay: .45s; }
+
+.portfolio-title span:hover {
+  color: var(--teal);
+  text-shadow: 0 0 35px #72d6c966;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(70px) rotateX(-45deg);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+    filter: blur(0);
+  }
+}
+
+.ring {
+  position: absolute;
+  width: min(70vw, 650px);
+  aspect-ratio: 1;
+  border: 1px solid #ffffff12;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: rotateRing 25s linear infinite;
+}
+
+.ring::before,
+.ring::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #72d6c91b;
+  border-radius: 50%;
+}
+
+.ring::before {
+  inset: 12%;
+}
+
+.ring::after {
+  inset: 25%;
+}
+
+.ring-dot {
+  position: absolute;
+  top: 15%;
+  left: 22%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 20px var(--teal);
+}
+
+@keyframes rotateRing {
+  to { transform: rotate(360deg); }
+}
+
+.corner-label {
+  position: absolute;
+  bottom: 30px;
+  left: 35px;
+  color: #8e9995;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  right: 35px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--teal);
+  font-size: 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.scroll-indicator span {
+  display: block;
+  width: 38px;
+  height: 1px;
+  background: var(--teal);
+  animation: lineMove 1.5s ease-in-out infinite;
+}
+
+@keyframes lineMove {
+  0%,100% { transform: scaleX(1); }
+  50% { transform: scaleX(.45); }
+}
+
+/* SECOND PAGE */
+
+#page2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+  padding: clamp(25px, 6vw, 85px);
+  background:
+    radial-gradient(ellipse at 75% 45%, #263d3b 0%, #1b2426 35%, #111719 75%);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  color: var(--teal);
+  letter-spacing: 4px;
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.name {
+  font-size: clamp(42px, 6vw, 85px);
+  line-height: .95;
+  letter-spacing: -4px;
+  overflow-wrap: anywhere;
+  margin-bottom: 25px;
+}
+
+.name span {
+  display: block;
+  color: var(--teal);
+}
+
+.role {
+  font-size: 15px;
+  color: var(--white);
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
+
+.description {
+  max-width: 480px;
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.section-label {
+  color: var(--teal);
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin: 22px 0 10px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill {
+  border: 1px solid #ffffff25;
+  border-radius: 30px;
+  padding: 10px 13px;
+  font-size: 11px;
+  color: #e7eeea;
+  transition: .25s;
+}
+
+.skill:hover {
+  background: var(--teal);
+  color: #111719;
+  transform: translateY(-3px);
+}
+
+.socials a {
+  display: inline-block;
+  color: var(--white);
+  text-decoration: none;
+  margin: 5px 12px 5px 0;
+  font-size: 13px;
+  border-bottom: 1px solid #72d6c966;
+  padding-bottom: 4px;
+}
+
+.socials a:hover {
+  color: var(--teal);
+}
+
+.email {
+  display: inline-block;
+  color: var(--muted);
+  margin-top: 10px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.email:hover {
+  color: var(--teal);
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 28px;
+  border: 0;
+  background: var(--teal);
+  color: #111719;
+  padding: 17px 22px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.cta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px #72d6c933;
+}
+
+.visual {
+  min-height: 550px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.character-orbit {
+  position: absolute;
+  width: min(40vw, 470px);
+  aspect-ratio: 1;
+  border: 1px solid #ffffff19;
+  border-radius: 50%;
+  animation: rotateRing 35s linear infinite;
+}
+
+.character-orbit::before {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border: 1px solid #72d6c91b;
+  border-radius: 50%;
+}
+
+.character-disc {
+  position: absolute;
+  width: min(32vw, 390px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 25%, #4a615b, #242e2b 60%, #151a19);
+  box-shadow: inset 0 0 70px #0007, 0 25px 90px #0005;
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Illustrated character styled to match the supplied reference:
+   loose dark hair, transparent glasses, blue check shirt, white top,
+   wide blue jeans, white sneakers and a red keychain. */
+.character {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 440px);
+  height: auto;
+  overflow: visible;
+  filter: drop-shadow(0 25px 28px #0007);
+  animation: float 5s ease-in-out infinite;
+}
+
+.sticker {
+  position: absolute;
+  z-index: 2;
+  padding: 13px 16px;
+  background: var(--white);
+  color: #171813;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 12px 30px #0003;
+}
+
+.sticker.one {
+  top: 16%;
+  right: 0;
+  transform: rotate(6deg);
+}
+
+.sticker.two {
+  bottom: 16%;
+  left: 0;
+  background: var(--teal);
+  transform: rotate(-7deg);
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.back-top {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  border: 1px solid #ffffff2a;
+  background: transparent;
+  color: var(--white);
+  padding: 11px 15px;
+  cursor: pointer;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.back-top:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
+@media (max-width: 760px) {
+  .portfolio-title {
+    font-size: 12vw;
+    letter-spacing: -.07em;
+  }
+
+  .corner-label {
+    left: 18px;
+    bottom: 20px;
+    font-size: 8px;
+  }
+
+  .scroll-indicator {
+    right: 18px;
+    bottom: 20px;
+    font-size: 8px;
+  }
+
+  #page2 {
+    grid-template-columns: 1fr;
+    padding: 75px 25px 30px;
+  }
+
+  .name {
+    font-size: clamp(43px, 12vw, 75px);
+  }
+
+  .visual {
+    min-height: 420px;
+  }
+
+  .character-orbit {
+    width: min(80vw, 390px);
+  }
+
+  .character-disc {
+    width: min(65vw, 320px);
+  }
+
+  .character {
+    width: min(100%, 390px);
+  }
+
+  .sticker.one {
+    right: 0;
+    top: 12%;
+  }
+
+  .sticker.two {
+    left: 0;
+    bottom: 10%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1: ONLY PORTFOLIO TEXT -->
+
+<section class="page" id="page1">
+
+  <div class="background-text top">CREATIVE DESIGN · AI VISUALS · MOTION</div>
+  <div class="background-text bottom">WELCOME TO MY CREATIVE WORLD</div>
+
+  <div class="ring">
+    <div class="ring-dot"></div>
+  </div>
+
+  <h1 class="portfolio-title" id="portfolioTitle" aria-label="PORTFOLIO">
+    <span>P</span><span>O</span><span>R</span><span>T</span>
+    <span>F</span><span>O</span><span>L</span><span>I</span><span>O</span>
+  </h1>
+
+  <div class="corner-label">RIAA RANDHAVAN · 2026</div>
+
+  <div class="scroll-indicator" id="openPortfolio">
+    <span></span> EXPLORE
+  </div>
+</section>
+
+<!-- PAGE 2: PROFILE AND CHARACTER -->
+
+<section class="page" id="page2">
+
+  <button class="back-top" id="backTop">← INTRO</button>
+
+  <div class="content">
+    <div class="eyebrow">Welcome to my creative world</div>
+
+    <h2 class="name">
+      Riaa
+      <span>Randhavan</span>
+    </h2>
+
+    <p class="role">AI Visual Creator &amp; Graphic Designer</p>
+
+    <p class="description">
+      I turn imaginative ideas into eye-catching visuals through AI image
+      creation, graphic design, reels and video editing. This is my little
+      corner of creativity.
+    </p>
+
+    <div class="section-label">MY SKILLS</div>
+
+    <div class="skills">
+      <span class="skill">AI Image Creation</span>
+      <span class="skill">Graphic Design</span>
+      <span class="skill">Reels &amp; Video Editing</span>
+    </div>
+
+    <div class="section-label">FIND ME ON INSTAGRAM</div>
+
+    <div class="socials">
+      <a href="https://instagram.com/nextf.rame07" target="_blank" rel="noreferrer">@nextf.rame07 ↗</a>
+      <a href="https://instagram.com/officialriaa07" target="_blank" rel="noreferrer">@officialriaa07 ↗</a>
+    </div>
+
+    <div class="section-label">CONTACT</div>
+
+    <a class="email" href="mailto:riarandhavan@gmail.com">
+      riarandhavan@gmail.com
+    </a>
+
+    <br>
+
+    <button class="cta" id="exploreBtn">
+      EXPLORE MY CREATIONS ↗
+    </button>
+  </div>
+
+  <div class="visual">
+
+    <div class="character-orbit"></div>
+    <div class="character-disc"></div>
+
+    <!-- Original vector character illustration. No external image link needed. -->
+    <svg class="character" viewBox="0 0 440 620" role="img"
+         aria-label="Illustrated young woman with loose dark hair, clear glasses, blue checked shirt, white top, wide jeans and white shoes"
+         xmlns="http://www.w3.org/2000/svg">
+
+      <defs>
+        <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#282321"/>
+          <stop offset=".55" stop-color="#4a3832"/>
+          <stop offset="1" stop-color="#201c1a"/>
+        </linearGradient>
+
+        <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#f5c9a7"/>
+          <stop offset="1" stop-color="#d99b78"/>
+        </linearGradient>
+
+        <pattern id="checks" width="22" height="22" patternUnits="userSpaceOnUse">
+          <rect width="22" height="22" fill="#9bbbe1"/>
+          <path d="M0 0H22V22" fill="none" stroke="#edf5ff" stroke-width="7"/>
+        </pattern>
+
+        <linearGradient id="denim" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#7397bd"/>
+          <stop offset="1" stop-color="#3e6289"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Loose shoulder-length hair behind the face -->
+      <path d="M132 111
+               C111 45 159 17 217 20
+               C285 18 325 66 304 132
+               L298 213 L280 252 L147 246
+               L126 197Z"
+            fill="url(#hair)"/>
+
+      <!-- Neck -->
+      <path d="M191 174 L190 215 L238 224 L242 177Z" fill="url(#skin)"/>
+
+      <!-- Face -->
+      <path d="M151 83
+               C151 47 183 36 219 38
+               C260 38 282 65 277 111
+               L266 158
+               C257 188 237 203 216 203
+               C193 201 172 184 163 158Z"
+            fill="url(#skin)"/>
+
+      <!-- Loose hair framing face -->
+      <path d="M145 107
+               C132 58 163 24 215 22
+               C266 21 299 57 290 105
+               L275 146 L270 92
+               C253 76 239 66 221 64
+               C201 80 176 86 155 87
+               L160 149 L145 170Z"
+            fill="url(#hair)"/>
+
+      <path d="M153 122 C140 155 146 194 164 224 L177 208 L171 153Z"
+            fill="#302623"/>
+      <path d="M276 116 C293 151 284 195 268 221 L253 205 L265 152Z"
+            fill="#302623"/>
+
+      <!-- Eyebrows -->
+      <path d="M174 111 Q190 101 203 111" fill="none" stroke="#4a3028" stroke-width="4" stroke-linecap="round"/>
+      <path d="M231 111 Q247 101 260 111" fill="none" stroke="#4a3028" stroke-width="4" stroke-linecap="round"/>
+
+      <!-- Eyes -->
+      <ellipse cx="190" cy="127" rx="8" ry="10" fill="#fffaf5"/>
+      <ellipse cx="246" cy="127" rx="8" ry="10" fill="#fffaf5"/>
+      <ellipse cx="192" cy="128" rx="4" ry="6" fill="#342b28"/>
+      <ellipse cx="244" cy="128" rx="4" ry="6" fill="#342b28"/>
+      <circle cx="193" cy="125" r="1.5" fill="#fff"/>
+      <circle cx="245" cy="125" r="1.5" fill="#fff"/>
+
+      <!-- Transparent glasses -->
+      <g fill="#dcebf4" fill-opacity=".12" stroke="#e4eef3" stroke-width="3">
+        <rect x="165" y="113" width="49" height="34" rx="11"/>
+        <rect x="222" y="113" width="49" height="34" rx="11"/>
+        <path d="M214 125 Q218 121 222 125"/>
+        <path d="M165 121 L154 116 M271 121 L282 116"/>
+      </g>
+
+      <!-- Nose and smile -->
+      <path d="M216 129 L210 148 Q216 153 222 148" fill="none" stroke="#c58768" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M199 166 Q216 181 235 165" fill="none" stroke="#a95051" stroke-width="3" stroke-linecap="round"/>
+      <path d="M204 168 Q216 173 230 167" fill="none" stroke="#fff2e8" stroke-width="2"/>
+
+      <!-- White top -->
+      <path d="M190 211 L216 228 L241 211
+               C264 222 278 244 282 277
+               L294 371 L146 371 L157 275
+               C160 244 174 222 190 211Z"
+            fill="#f7f5f0"/>
+
+      <!-- Blue checked overshirt -->
+      <path d="M190 211 L169 220
+               C147 230 132 249 124 279
+               L106 372 L160 388 L184 294 L193 241Z"
+            fill="url(#checks)" stroke="#85a9d1" stroke-width="2"/>
+
+      <path d="M241 211 L263 220
+               C285 232 299 252 307 280
+               L331 370 L278 388 L252 294 L238 241Z"
+            fill="url(#checks)" stroke="#85a9d1" stroke-width="2"/>
+
+      <!-- Open shirt front panels -->
+      <path d="M190 211 L209 235 L193 280 L176 235Z" fill="#eaf2fb"/>
+      <path d="M241 211 L221 235 L238 280 L255 235Z" fill="#eaf2fb"/>
+
+      <!-- Shirt check details -->
+      <path d="M125 277H174 M119 302H168 M114 328H163 M111 352H158
+               M140 244V365 M159 239V351
+               M263 244V351 M284 254V365
+               M268 277H308 M275 302H315 M282 328H322 M289 352H328"
+            fill="none" stroke="#f5f9ff" stroke-width="5" opacity=".9"/>
+
+      <!-- Arms -->
+      <path d="M107 370 L96 430 Q96 447 112 450 Q126 449 130 432 L150 382Z"
+            fill="url(#skin)"/>
+      <path d="M330 370 L342 430 Q343 447 326 450 Q312 449 308 432 L287 382Z"
+            fill="url(#skin)"/>
+
+      <!-- White belt -->
+      <rect x="147" y="365" width="147" height="18" rx="3" fill="#f6f5f0"/>
+      <rect x="207" y="362" width="31" height="25" rx="4" fill="none" stroke="#c4c9c8" stroke-width="4"/>
+
+      <!-- Wide-leg jeans -->
+      <path d="M147 383 L294 383
+               L307 482 L289 575 L230 575
+               L218 470 L204 575 L144 575
+               L130 482Z"
+            fill="url(#denim)" stroke="#345777" stroke-width="2"/>
+
+      <!-- Denim seams and pocket details -->
+      <path d="M218 470 L230 575 M154 393 L177 416 L199 393
+               M267 393 L289 416 L295 397"
+            fill="none" stroke="#9db8d0" stroke-width="3"/>
+
+      <path d="M160 420 L195 420 M265 420 L289 420"
+            stroke="#3e6289" stroke-width="3"/>
+
+      <!-- Red character keychain -->
+      <path d="M278 386 Q296 394 293 411" fill="none" stroke="#d4d8d8" stroke-width="4"/>
+      <circle cx="292" cy="425" r="15" fill="#e43c49"/>
+      <circle cx="292" cy="425" r="8" fill="#fff5e9"/>
+      <circle cx="289" cy="423" r="1.5" fill="#2b2423"/>
+      <circle cx="295" cy="423" r="1.5" fill="#2b2423"/>
+      <path d="M289 428 Q292 431 295 428" fill="none" stroke="#2b2423" stroke-width="1.5"/>
+
+      <!-- White sneakers -->
+      <path d="M144 575 L204 575 L206 594
+               Q205 605 191 605 L133 605
+               Q127 600 134 591Z"
+            fill="#f6f5f0" stroke="#d5d8d9" stroke-width="3"/>
+      <path d="M230 575 L289 575 L301 591
+               Q308 601 297 605 L239 605
+               Q228 605 228 595Z"
+            fill="#f6f5f0" stroke="#d5d8d9" stroke-width="3"/>
+
+      <path d="M140 595H195 M240 595H296"
+            stroke="#bfc6c8" stroke-width="3"/>
+
+    </svg>
+
+    <div class="sticker one">Ideas → Visuals</div>
+    <div class="sticker two">Made with imagination ✳</div>
+
+  </div>
+</section>
+
+<script>
+const title = document.getElementById("portfolioTitle");
+const letters = [...title.querySelectorAll("span")];
+
+let mouseX = 0;
+let mouseY = 0;
+
+document.addEventListener("mousemove", (event) => {
+  mouseX = event.clientX;
+  mouseY = event.clientY;
+
+  const rect = title.getBoundingClientRect();
+  const centerX = rect.left + rect.width / 2;
+  const centerY = rect.top + rect.height / 2;
+
+  letters.forEach((letter, index) => {
+    const letterRect = letter.getBoundingClientRect();
+    const x = event.clientX - (letterRect.left + letterRect.width / 2);
+    const y = event.clientY - (letterRect.top + letterRect.height / 2);
+    const distance = Math.sqrt(x * x + y * y);
+
+    if (distance < 180) {
+      const strength = (180 - distance) / 180;
+      const moveX = -x * strength * 0.22;
+      const moveY = -y * strength * 0.22;
+      const rotate = (index % 2 === 0 ? 1 : -1) * strength * 9;
+
+      letter.style.transform =
+        `translate(${moveX}px, ${moveY}px) rotate(${rotate}deg) scale(${1 + strength * 0.12})`;
+    } else {
+      letter.style.transform = "";
+    }
+  });
+});
+
+document.addEventListener("mouseleave", () => {
+  letters.forEach(letter => {
+    letter.style.transform = "";
+  });
+});
+
+document.getElementById("openPortfolio").addEventListener("click", () => {
+  document.getElementById("page2").scrollIntoView({
+    behavior: "smooth"
+  });
+});
+
+document.getElementById("backTop").addEventListener("click", () => {
+  document.getElementById("page1").scrollIntoView({
+    behavior: "smooth"
+  });
+});
+
+document.getElementById("exploreBtn").addEventListener("click", () => {
+  window.open("https://instagram.com/nextf.rame07", "_blank");
+});
+</script>
+
+<section id="ai-gallery">
+<style>
+#ai-gallery {
+  min-height: 100vh;
+  padding: 55px 5%;
+  background: #111719;
+  color: #f6f5f0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#ai-gallery * { box-sizing: border-box; }
+
+.gallery-heading {
+  text-align: center;
+  color: #72D6C9;
+  font-size: clamp(28px, 5vw, 55px);
+  margin: 0 0 35px;
+  letter-spacing: -2px;
+}
+
+.gallery-window {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 20px;
+  transition: transform .65s cubic-bezier(.22,.8,.25,1);
+  will-change: transform;
+}
+
+.gallery-item {
+  flex: 0 0 calc((100% - 40px) / 3);
+  height: 430px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #202a29;
+  position: relative;
+  transition: transform .4s, box-shadow .4s;
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px #72D6C933;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 28px;
+}
+
+.gallery-arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #72D6C9;
+  background: transparent;
+  color: #72D6C9;
+  font-size: 24px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.gallery-arrow:hover {
+  background: #72D6C9;
+  color: #111719;
+}
+
+.gallery-progress {
+  width: 100px;
+  height: 3px;
+  background: #394442;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-progress span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: #72D6C9;
+  transition: width .4s;
+}
+
+/* Full image preview */
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(5, 9, 9, .94);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+}
+
+.gallery-lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gallery-lightbox img {
+  max-width: 92vw;
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: 8px;
+  transform: scale(.92);
+  transition: transform .35s;
+}
+
+.gallery-lightbox.active img {
+  transform: scale(1);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 22px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #72D6C9;
+  background: #111719;
+  color: white;
+  border-radius: 50%;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media(max-width: 800px) {
+  .gallery-item {
+    flex-basis: calc((100% - 16px) / 2);
+    height: 360px;
+  }
+  .gallery-track { gap: 16px; }
+}
+
+@media(max-width: 520px) {
+  #ai-gallery { padding: 45px 18px; }
+  .gallery-item {
+    flex-basis: 100%;
+    height: 430px;
+  }
+  .gallery-track { gap: 14px; }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  .gallery-track,
+  .gallery-item,
+  .gallery-item img,
+  .gallery-lightbox,
+  .gallery-lightbox img {
+    transition: none;
+  }
+}
+</style>
+
+<h2 class="gallery-heading">AI IMAGE CREATION</h2>
+
+<div class="gallery-window" id="galleryWindow">
+  <div class="gallery-track" id="galleryTrack">
+
+    <div class="gallery-item">
+      <img src="C:/Users/DELL/OneDrive/Desktop/portfolio/Fashion%20Editorial%20png.png"
+     alt="Fashion Editorial"
+     loading="lazy">    </div>
+
+    <div class="gallery-item">
+      <img src="C:/Users/DELL/OneDrive/Desktop/portfolio/Product%20Visual%20png.png"
+     alt="Luxury Perfume Campaign"
+     loading="lazy">    </div>
+
+    <div class="gallery-item">
+      <img src="C:/Users/DELL/OneDrive/Desktop/portfolio/Lifestyle%20Story%20png.png"
+     alt="Lifestyle Story"
+     loading="lazy">
+    </div>
+
+    <div class="gallery-item">
+      <img src="C:/Users/DELL/OneDrive/Desktop/portfolio/Skincare%20Visual%20png.png"
+     alt="Skincare Visual"
+     loading="lazy">
+    </div>
+
+    <div class="gallery-item">
+      <img src="C:/Users/DELL/OneDrive/Desktop/portfolio/Chocolate%20Story%20png.png"
+     alt="Chocolate Story"
+     loading="lazy">
+    </div>
+
+    <div class="gallery-item">
+      <img src="C:/Users/DELL/OneDrive/Desktop/portfolio/brand%20identity%20png.png"
+     alt="Brand Identity"
+     loading="lazy">    </div>
+
+    <div class="gallery-item">
+      <img src="C:/Users/DELL/OneDrive/Desktop/portfolio/Jewellery%20Edit%20png.png"
+     alt="Jewellery Edit"
+     loading="lazy">
+    </div>
+
+    <div class="gallery-item">
+      <img src="C:/Users/DELL/OneDrive/Desktop/portfolio/Automotive%20Art%20png.png"
+     alt="Automotive Art"
+     loading="lazy">
+    </div>
+
+    <div class="gallery-item">
+      <img src="C:/Users/DELL/OneDrive/Desktop/portfolio/Dream%20Destination%20png.png"
+     alt="Dream Destination"
+     loading="lazy">    </div>
+
+    <div class="gallery-item">
+      <img src="C:/Users/DELL/OneDrive/Desktop/portfolio/Fragrance%20Story%20png.png"
+     alt="Fragrance Story"
+     loading="lazy">
+    </div>
+
+    <div class="gallery-item">
+      <img src="C:/Users/DELL/OneDrive/Desktop/portfolio/Interior%20Concept%20png.png"
+     alt="Interior Concept"
+     loading="lazy">    </div>
+
+    <div class="gallery-item">
+      <img src="C:/Users/DELL/OneDrive/Desktop/portfolio/Editorial%20Concept%20png.png"
+     alt="Editorial Concept"
+     loading="lazy">    </div>
+
+    <div class="gallery-item">
+      <img src="C:/Users/DELL/OneDrive/Desktop/portfolio/Cosmetic%20Concept%20png.png"
+     alt="Cosmetic Concept"
+     loading="lazy">    </div>
+
+  </div>
+</div>
+
+<div class="gallery-controls">
+  <button class="gallery-arrow" id="galleryPrev" aria-label="Previous image">‹</button>
+  <div class="gallery-progress">
+    <span id="galleryProgress"></span>
+  </div>
+  <button class="gallery-arrow" id="galleryNext" aria-label="Next image">›</button>
+</div>
+
+<div class="gallery-lightbox" id="galleryLightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+  <img id="lightboxImage" src="" alt="Full size portfolio image">
+</div>
+
+<script>
+(() => {
+  const section = document.getElementById('ai-gallery');
+  const track = section.querySelector('#galleryTrack');
+  const items = [...section.querySelectorAll('.gallery-item')];
+  const prev = section.querySelector('#galleryPrev');
+  const next = section.querySelector('#galleryNext');
+  const progress = section.querySelector('#galleryProgress');
+  const lightbox = section.querySelector('#galleryLightbox');
+  const lightboxImage = section.querySelector('#lightboxImage');
+  const close = section.querySelector('#lightboxClose');
+
+  let index = 0;
+  let startX = 0;
+  let endX = 0;
+
+  function visibleCount() {
+    if (window.innerWidth <= 520) return 1;
+    if (window.innerWidth <= 800) return 2;
+    return 3;
+  }
+
+  function maxIndex() {
+    return Math.max(0, items.length - visibleCount());
+  }
+
+  function updateSlider() {
+    index = Math.min(index, maxIndex());
+
+    const distance = items[index].offsetLeft - items[0].offsetLeft;
+    track.style.transform = `translateX(-${distance}px)`;
+
+    const percentage = maxIndex() === 0
+      ? 100
+      : ((index + 1) / (maxIndex() + 1)) * 100;
+
+    progress.style.width = percentage + '%';
+    prev.disabled = index === 0;
+    next.disabled = index === maxIndex();
+
+    prev.style.opacity = prev.disabled ? '.4' : '1';
+    next.style.opacity = next.disabled ? '.4' : '1';
+  }
+
+  next.addEventListener('click', () => {
+    if (index < maxIndex()) {
+      index++;
+      updateSlider();
+    }
+  });
+
+  prev.addEventListener('click', () => {
+    if (index > 0) {
+      index--;
+      updateSlider();
+    }
+  });
+
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      const image = item.querySelector('img');
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closePreview() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      if (!lightbox.classList.contains('active')) {
+        lightboxImage.src = '';
+      }
+    }, 300);
+  }
+
+  close.addEventListener('click', closePreview);
+
+  lightbox.addEventListener('click', event => {
+    if (event.target === lightbox) closePreview();
+  });
+
+  document.addEventListener('keydown', event => {
+    if (!lightbox.classList.contains('active')) return;
+
+    if (event.key === 'Escape') closePreview();
+
+    if (event.key === 'ArrowRight') {
+      if (index < maxIndex()) {
+        index++;
+        updateSlider();
+      }
+    }
+
+    if (event.key === 'ArrowLeft') {
+      if (index > 0) {
+        index--;
+        updateSlider();
+      }
+    }
+  });
+
+  track.addEventListener('touchstart', event => {
+    startX = event.touches[0].clientX;
+  }, { passive: true });
+
+  track.addEventListener('touchend', event => {
+    endX = event.changedTouches[0].clientX;
+    const difference = startX - endX;
+
+    if (Math.abs(difference) < 45) return;
+
+    if (difference > 0 && index < maxIndex()) index++;
+    if (difference < 0 && index > 0) index--;
+
+    updateSlider();
+  }, { passive: true });
+
+  window.addEventListener('resize', updateSlider);
+  updateSlider();
+})();
+</script>
+</section>
+
+<style>
+#ai-video-page {
+  background: #08090d;
+  color: white;
+  padding: 55px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+#ai-video-page * { box-sizing: border-box; }
+#ai-video-page .av-label {
+  color: #68aaff;
+  letter-spacing: 4px;
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+#ai-video-page h2 {
+  font-size: clamp(30px, 5vw, 54px);
+  margin: 0 0 12px;
+}
+#ai-video-page .av-description {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+#ai-video-page .av-slider {
+  max-width: 850px;
+  margin: auto;
+}
+#ai-video-page .av-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border: 1px solid #30394b;
+  border-radius: 18px;
+  overflow: hidden;
+}
+#ai-video-page video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background: #000;
+}
+#ai-video-page .av-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin-top: 22px;
+}
+#ai-video-page .av-arrow {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #5795ff;
+  border-radius: 50%;
+  background: #121a2a;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+#ai-video-page .av-arrow:hover {
+  background: #2368e8;
+}
+#ai-video-page .av-counter {
+  color: #bbb;
+  font-size: 14px;
+  min-width: 75px;
+}
+#ai-video-page .av-counter strong {
+  color: white;
+  font-size: 20px;
+}
+#ai-video-page .av-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+#ai-video-page .av-dot {
+  width: 10px;
+  height: 10px;
+  border: 0;
+  border-radius: 50%;
+  background: #555;
+  padding: 0;
+  cursor: pointer;
+}
+#ai-video-page .av-dot.active {
+  background: #68aaff;
+  box-shadow: 0 0 10px #68aaff;
+}
+#ai-video-page .av-hint {
+  color: #777;
+  font-size: 12px;
+  margin-top: 18px;
+}
+@media (max-width: 600px) {
+  #ai-video-page { padding: 40px 12px; }
+  #ai-video-page .av-frame {
+    aspect-ratio: 9 / 16;
+    max-height: 65vh;
+  }
+}
+</style>
+
+<section id="ai-video-page">
+  <div class="av-label">MY CREATIVE SHOWCASE</div>
+  <h2>AI VIDEO CREATION</h2>
+  <p class="av-description">
+    AI-generated visuals · Cinematic storytelling · Creative edits
+  </p>
+
+  <div class="av-slider">
+    <div class="av-frame" id="av-frame">
+      <video id="av-player" controls playsinline preload="metadata">
+        Your browser does not support video playback.
+      </video>
+    </div>
+
+    <div class="av-controls">
+      <button type="button" class="av-arrow" id="av-prev"
+        aria-label="Previous video">‹</button>
+
+      <div class="av-counter">
+        <strong id="av-current">01</strong> /
+        <span id="av-total">06</span>
+      </div>
+
+      <button type="button" class="av-arrow" id="av-next"
+        aria-label="Next video">›</button>
+    </div>
+
+    <div class="av-dots" id="av-dots"></div>
+    <p class="av-hint">Click the arrows or swipe to explore</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  const section = document.getElementById('ai-video-page');
+  if (!section || section.dataset.initialized === 'true') return;
+  section.dataset.initialized = 'true';
+
+  // YOUR SIX VIDEO FILE PATHS
+  const videos = [
+    'file:///C:/Users/DELL/OneDrive/Desktop/portfolio/video%201.mp4',
+    'file:///C:/Users/DELL/OneDrive/Desktop/portfolio/video%202.mp4',
+    'file:///C:/Users/DELL/OneDrive/Desktop/portfolio/video%203.mp4',
+    'file:///C:/Users/DELL/OneDrive/Desktop/portfolio/video%204.mp4',
+    'file:///C:/Users/DELL/OneDrive/Desktop/portfolio/video%205.mp4',
+    'file:///C:/Users/DELL/OneDrive/Desktop/portfolio/video%206.mp4'
+  ];
+
+  const player = section.querySelector('#av-player');
+  const currentLabel = section.querySelector('#av-current');
+  const dotsContainer = section.querySelector('#av-dots');
+  const frame = section.querySelector('#av-frame');
+
+  let currentIndex = 0;
+  let touchStartX = 0;
+
+  videos.forEach(function (_, index) {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'av-dot';
+    dot.setAttribute('aria-label', 'Video ' + (index + 1));
+    dot.addEventListener('click', function () {
+      showVideo(index);
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  function showVideo(index) {
+    currentIndex = (index + videos.length) % videos.length;
+
+    player.pause();
+    player.src = videos[currentIndex];
+    player.load();
+
+    currentLabel.textContent =
+      String(currentIndex + 1).padStart(2, '0');
+
+    Array.from(dotsContainer.children).forEach(function (dot, i) {
+      dot.classList.toggle('active', i === currentIndex);
+    });
+  }
+
+  section.querySelector('#av-prev').addEventListener('click', function () {
+    showVideo(currentIndex - 1);
+  });
+
+  section.querySelector('#av-next').addEventListener('click', function () {
+    showVideo(currentIndex + 1);
+  });
+
+  frame.addEventListener('touchstart', function (event) {
+    touchStartX = event.changedTouches[0].screenX;
+  }, { passive: true });
+
+  frame.addEventListener('touchend', function (event) {
+    const difference = event.changedTouches[0].screenX - touchStartX;
+    if (Math.abs(difference) > 50) {
+      showVideo(difference < 0 ? currentIndex + 1 : currentIndex - 1);
+    }
+  }, { passive: true });
+
+  showVideo(0);
+})();
+</script>
+
+<section id="contact-page" aria-label="Contact Riaa">
+  <style>
+    #contact-page {
+      min-height: 100vh;
+      padding: 60px 24px;
+      background: radial-gradient(
+        ellipse at 70% 35%, #234441, #111719 68%
+      );
+      color: #F6F5F0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+      font-family: Arial, sans-serif;
+    }
+
+    #contact-page h2 {
+      font-size: clamp(44px, 7vw, 88px);
+      line-height: .95;
+      margin: 18px 0 24px;
+    }
+
+    #contact-page h2 span {
+      color: #72D6C9;
+    }
+
+    #contact-page p {
+      line-height: 1.8;
+      color: #c4cbc6;
+    }
+
+    #contact-page .contact-links a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid #ffffff26;
+      padding: 14px 0;
+    }
+
+    #contact-page .contact-form {
+      padding: 30px;
+      border: 1px solid #72D6C955;
+      border-radius: 10px;
+      background: #101918;
+    }
+
+    #contact-page label {
+      display: block;
+      margin: 16px 0 8px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    #contact-page input,
+    #contact-page select,
+    #contact-page textarea {
+      width: 100%;
+      padding: 14px;
+      box-sizing: border-box;
+      border: 1px solid #ffffff30;
+      border-radius: 4px;
+      background: #0b1111;
+      color: white;
+      font: inherit;
+    }
+
+    #contact-page textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    #contact-page .send-whatsapp {
+      width: 100%;
+      margin-top: 22px;
+      padding: 18px;
+      border: 0;
+      border-radius: 4px;
+      background: #72D6C9;
+      color: #10201F;
+      font-weight: 900;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+
+    #contact-page .send-whatsapp:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px #72d6c944;
+    }
+
+    @media (max-width: 760px) {
+      #contact-page {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+      }
+    }
+  </style>
+
+  <div class="contact-copy">
+    <div style="color:#72D6C9;letter-spacing:3px">
+      05 / CONTACT ME
+    </div>
+
+    <h2>LET’S CREATE<br>
+      <span>TOGETHER.</span>
+    </h2>
+
+    <p>
+      Have a creative idea, a brand to build, or a project in mind?
+      Tell me about it and send your details directly to my WhatsApp.
+    </p>
+
+    <div class="contact-links">
+      <a href="mailto:riarandhavan@gmail.com">
+        ✉ &nbsp; riarandhavan@gmail.com
+      </a>
+
+      <a href="https://instagram.com/officialriaa07"
+         target="_blank" rel="noopener noreferrer">
+        ◎ &nbsp; Instagram · @officialriaa07
+      </a>
+
+      <a href="https://instagram.com/nextf.rame07"
+         target="_blank" rel="noopener noreferrer">
+        ◎ &nbsp; Instagram · @nextf.rame07
+      </a>
+    </div>
+  </div>
+
+  <form class="contact-form" id="whatsappContactForm">
+    <h3>Tell me about your project</h3>
+
+    <p>Fill in the details below. WhatsApp will open with your
+      message ready to send.</p>
+
+    <label for="contactName">Your Name</label>
+    <input id="contactName" name="name"
+      placeholder="Enter your name" required>
+
+    <label for="contactEmail">Email Address</label>
+    <input id="contactEmail" name="email" type="email"
+      placeholder="you@example.com" required>
+
+    <label for="contactProject">What do you need?</label>
+    <select id="contactProject" name="project" required>
+      <option value="" disabled selected>Select a service</option>
+      <option>AI Image Creation</option>
+      <option>AI Video Creation</option>
+      <option>Graphic Design</option>
+      <option>Reels & Video Editing</option>
+      <option>Brand / Product Promotion</option>
+      <option>Other Project</option>
+    </select>
+
+    <label for="contactMessage">Project Details</label>
+    <textarea id="contactMessage" name="message"
+      placeholder="Tell me briefly about your idea..."
+      required></textarea>
+
+    <button class="send-whatsapp" type="submit">
+      SEND DIRECTLY TO WHATSAPP ↗
+    </button>
+
+    <p style="font-size:12px;text-align:center">
+      WhatsApp opens with your message prepared.
+      Review it and tap Send.
+    </p>
+  </form>
+
+  <script>
+    document.getElementById("whatsappContactForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("contactName").value.trim();
+        const email = document.getElementById("contactEmail").value.trim();
+        const project = document.getElementById("contactProject").value;
+        const details = document.getElementById("contactMessage").value.trim();
+
+        // India country code + your WhatsApp number
+        const phone = "919420961949";
+
+        const message =
+          `Hi Riaa! I'd like to discuss a project.\n\n` +
+          `Name: ${name}\n` +
+          `Email: ${email}\n` +
+          `Service: ${project}\n` +
+          `Project Details: ${details}`;
+
+        const url =
+          "https://wa.me/" + phone +
+          "?text=" + encodeURIComponent(message);
+
+        window.open(url, "_blank");
+      });
+  </script>
+</section>
+
+<section id="thank-you-page">
+  <style>
+    #thank-you-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      background: radial-gradient(
+        circle, #214541 0%, #101719 70%
+      );
+      overflow: hidden;
+    }
+
+    #thank-you-page h2 {
+      margin: 0;
+      color: #72D6C9;
+      font-size: clamp(55px, 12vw, 140px);
+      font-weight: 900;
+      letter-spacing: -4px;
+      text-shadow:
+        0 0 10px #72D6C9,
+        0 0 30px #72D6C9,
+        0 0 60px #72D6C9;
+
+      animation:
+        thankYouRise 1.3s ease-out both,
+        thankYouGlow 2s ease-in-out 1.3s infinite alternate;
+    }
+
+    #thank-you-page p {
+      color: #F6F5F0;
+      font-size: 15px;
+      margin: 22px 0;
+    }
+
+    #thank-you-page a {
+      display: inline-block;
+      padding: 14px 24px;
+      background: #72D6C9;
+      color: #101719;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    #thank-you-page a:hover {
+      box-shadow: 0 0 25px #72D6C9;
+      transform: translateY(-3px);
+    }
+
+    @keyframes thankYouRise {
+      from {
+        opacity: 0;
+        transform: translateY(100px);
+        filter: blur(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes thankYouGlow {
+      from {
+        text-shadow:
+          0 0 10px #72D6C9,
+          0 0 25px #72D6C9;
+      }
+      to {
+        text-shadow:
+          0 0 20px #72D6C9,
+          0 0 45px #72D6C9,
+          0 0 75px #72D6C9;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #thank-you-page h2 {
+        animation: none;
+      }
+    }
+  </style>
+
+  <h2>THANK YOU.</h2>
+
+  <p>Thank you for visiting my creative portfolio.</p>
+
+  <a href="#contact-page">LET’S CONNECT ↗</a>
+</section>
+/* Responsive improvements */
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+  font: inherit;
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    flex-wrap: wrap;
+  }
+
+  .topnav {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .topnav a {
+    max-width: 100%;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  #about-page,
+  #contact-page {
+    grid-template-columns: 1fr;
+  }
+}
+</body>
+</html>
